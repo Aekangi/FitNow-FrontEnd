@@ -18,7 +18,9 @@ FitNow is designed for those individuals that would like to get fit through exer
 
 ### Technologies Used
 
-### ![Componentent Hierarchy Diagram](assets/FitNow-CHD.png)
+### Componentent Hierarchy Diagram
+
+![](assets/FitNow-CHD.png)
 
 ### Future Updates
 
