@@ -40,19 +40,6 @@
       "last 1 safari version"
     ]
   },
-  "description": "FitNow allows users to access workout videos and view different diet plans to assist in their healt journey.",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Aekangi/FitNow-FrontEnd.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Aekangi/FitNow-FrontEnd/issues"
-  },
-  "homepage": "https://github.com/Aekangi/FitNow-FrontEnd#readme",
   "devDependencies": {
     "nodemon": "^2.0.20"
   }
