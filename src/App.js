@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { CheckSession } from './services/Auth'
 import Nav from './components/Nav'
 import Home from './pages/Home'
-import Login from './pages/Login'
+import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Workout from './pages/Workout'
 import DietPlan from './pages/DietPlan'
@@ -47,7 +47,7 @@ function App() {
           <Route
             path="/login"
             element={
-              <Login
+              <SignIn
                 setUser={setUser}
                 toggleAuthenticated={toggleAuthenticated}
               />
