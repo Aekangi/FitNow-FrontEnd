@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Workout from './pages/Workout'
+import WorkoutDetails from './pages/WorkoutDetails'
 import DietPlan from './pages/DietPlan'
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
             }
           />
           <Route path="/exercises" element={<Workout />} />
+          <Route path='"/exercises/:id' element={<WorkoutDetails />} />
           <Route path="/dietplans" element={<DietPlan />} />
         </Routes>
       </main>

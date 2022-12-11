@@ -4,7 +4,7 @@ function WorkoutCard({name, duration, difficulty_level, video_url}) {
   return (
     <div>
       <section>
-      <video  controls> <source src={video_url}/></video>
+      <video width="320" height="240" controls> <source src={video_url}/></video>
       </section>
       <div>
         <h1>{name}</h1>
