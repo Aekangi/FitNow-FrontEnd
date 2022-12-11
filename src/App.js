@@ -9,6 +9,7 @@ import SignUp from './pages/SignUp'
 import Workout from './pages/Workout'
 import WorkoutDetails from './pages/WorkoutDetails'
 import DietPlan from './pages/DietPlan'
+import DietPlanDetails from './pages/DietPlanDetails'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -64,8 +65,12 @@ function App() {
             }
           />
           <Route path="/exercises" element={<Workout />} />
-          <Route path='"/exercise/:exercise_id' element={<WorkoutDetails />} />
+          <Route path="/exercise/:exercise_id" element={<WorkoutDetails />} />
           <Route path="/dietplans" element={<DietPlan />} />
+          {/* <Route
+            path="/dietplans/:diet_plan_id"
+            element={<DietPlanDetails />}
+          /> */}
         </Routes>
       </main>
     </div>

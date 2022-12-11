@@ -9,6 +9,7 @@ const DietPlan = () => {
 
   const getDietPlan = async () => {
     const response = await axios.get(`${BASE_URL}/dietplans`)
+    console.log(response.data)
     setDietPlans(response.data)
   }
 
@@ -19,6 +20,15 @@ const DietPlan = () => {
   return (
     <div>
       <h1>Diet Plans</h1>
+      <section>
+        {dietPlans?.map((dietPlan) => (
+          <div key={dietPlan.id}>
+            <Link to={`/dietplans/${dietPlan.id}`}>
+              <DietPlanCard photo={dietPlan.photo} name={dietPlan.name} />
+            </Link>
+          </div>
+        ))}
+      </section>
     </div>
   )
 }
