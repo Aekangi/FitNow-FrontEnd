@@ -6,13 +6,15 @@ import { BASE_URL } from '../services/Api'
 
 const Workout = () => {
   const [exercises, setExercises] = useState([])
-  const getWorkoutVideos = async () => {
+
+  const getAllWorkoutVideos = async () => {
     const response = await axios.get(`${BASE_URL}/exercises`)
+    console.log(response.data)
     setExercises(response.data)
   }
 
   useEffect(() => {
-    getWorkoutVideos()
+    getAllWorkoutVideos()
   }, [])
 
   return (
@@ -21,7 +23,7 @@ const Workout = () => {
       <section>
         {exercises?.map((exercise) => (
           <div key={exercise.id}>
-            <Link to={`/exercises/${exercise._id}`}>
+            <Link to={`/exercises/${exercise.id}`}>
               <WorkoutCard video={exercise?.video_url} name={exercise?.name} />
             </Link>
           </div>
