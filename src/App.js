@@ -8,6 +8,7 @@ import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Workout from './pages/Workout'
 import WorkoutDetails from './pages/WorkoutDetails'
+import AddWorkout from './pages/AddWorkout'
 import DietPlan from './pages/DietPlan'
 import DietPlanDetails from './pages/DietPlanDetails'
 import AddDietPlan from './pages/AddDietPlan'
@@ -73,6 +74,7 @@ function App() {
             element={<DietPlanDetails />}
           />
           <Route path="/dietplans/diet_plan_form" element={<AddDietPlan />} />
+          <Route path="/exercises/exercise_form" element={<AddWorkout />} />
         </Routes>
       </main>
     </div>

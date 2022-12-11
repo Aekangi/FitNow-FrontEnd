@@ -29,6 +29,11 @@ const Workout = () => {
           </div>
         ))}
       </section>
+      <div>
+        <button>
+          <Link to={'/exercises/exercise_form'}>Add a Workout Clip</Link>
+        </button>
+      </div>
     </div>
   )
 }
