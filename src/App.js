@@ -12,6 +12,7 @@ import AddWorkout from './pages/AddWorkout'
 import DietPlan from './pages/DietPlan'
 import DietPlanDetails from './pages/DietPlanDetails'
 import AddDietPlan from './pages/AddDietPlan'
+import UpdateDietPlan from './pages/UpdateDietPlan'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -68,13 +69,17 @@ function App() {
           />
           <Route path="/exercises" element={<Workout />} />
           <Route path="/exercises/:exercise_id" element={<WorkoutDetails />} />
+          <Route path="/exercises/exercise_form" element={<AddWorkout />} />
           <Route path="/dietplans" element={<DietPlan />} />
           <Route
             path="/dietplans/:diet_plan_id"
             element={<DietPlanDetails />}
           />
           <Route path="/dietplans/diet_plan_form" element={<AddDietPlan />} />
-          <Route path="/exercises/exercise_form" element={<AddWorkout />} />
+          <Route
+            path="/dietplans/update_diet_plan/:diet_plan_id"
+            element={<UpdateDietPlan />}
+          />
         </Routes>
       </main>
     </div>

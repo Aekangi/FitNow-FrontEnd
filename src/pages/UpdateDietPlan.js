@@ -1,9 +1,13 @@
-import { useState } from 'react'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import Client, { BASE_URL } from '../services/Api'
+import { BASE_URL } from '../services/Api'
 
-const AddDietPlan = () => {
+const UpdateDietPlan = () => {
+  let { diet_plan_id } = useParams()
   let navigate = useNavigate()
+
   const initialForm = {
     name: '',
     photo: '',
@@ -16,40 +20,51 @@ const AddDietPlan = () => {
     day6: '',
     day7: ''
   }
-
-  const [formState, setFormState] = useState(initialForm)
-
-  const handleChange = (e) => {
-    setFormState({ ...formState, [e.target.id]: e.target.value })
+  const [formValues, setFormValues] = useState(initialForm)
+  const getDietPlanDetailsById = async () => {
+    const response = await axios.get(`${BASE_URL}/dietplans/${diet_plan_id}`)
+    setFormValues(response.data)
   }
-  const handleSubmit = async (e) => {
+
+  useEffect(() => {
+    getDietPlanDetailsById()
+  })
+
+  const handleChange = (event) => {
+    setFormValues({
+      ...formValues,
+      [event.target.name]: event.target.value
+    })
+  }
+
+  const handleSubmit = (e) => {
     e.preventDefault()
-    await Client.post(`${BASE_URL}/dietplans`, formState)
-    setFormState(initialForm)
+    axios.put(`${BASE_URL}/dietplans/${diet_plan_id}`, formValues)
+    setFormValues(initialForm)
     navigate('/dietplans')
   }
 
   return (
     <div>
-      <h1>Add Diet Plan</h1>
+      <h1>Update Diet Plan</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Diet Plan Name</label>
           <input
             type="text"
-            id="name"
+            name="name"
             onChange={handleChange}
-            value={formState.name}
+            value={formValues.name}
             required
           ></input>
         </div>
         <div>
-          <label htmlFor="image">Image Url</label>
+          <label htmlFor="photo">Image Url</label>
           <input
             type="text"
-            id="photo"
+            name="photo"
             onChange={handleChange}
-            value={formState.image}
+            value={formValues?.photo}
             required
           ></input>
         </div>
@@ -60,7 +75,7 @@ const AddDietPlan = () => {
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formState.diet_type}
+            value={formValues?.diet_type}
             required
           ></textarea>
         </div>
@@ -71,7 +86,7 @@ const AddDietPlan = () => {
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formState.day1}
+            value={formValues?.day1}
             required
           ></textarea>
         </div>
@@ -82,7 +97,7 @@ const AddDietPlan = () => {
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formState.day2}
+            value={formValues?.day2}
             required
           ></textarea>
         </div>{' '}
@@ -93,7 +108,7 @@ const AddDietPlan = () => {
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formState.day3}
+            value={formValues?.day3}
             required
           ></textarea>
         </div>{' '}
@@ -104,7 +119,7 @@ const AddDietPlan = () => {
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formState.day4}
+            value={formValues?.day4}
             required
           ></textarea>
         </div>{' '}
@@ -115,7 +130,7 @@ const AddDietPlan = () => {
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formState.day5}
+            value={formValues?.day5}
             required
           ></textarea>
         </div>{' '}
@@ -126,7 +141,7 @@ const AddDietPlan = () => {
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formState.day6}
+            value={formValues?.day6}
             required
           ></textarea>
         </div>{' '}
@@ -137,16 +152,16 @@ const AddDietPlan = () => {
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formState.day7}
+            value={formValues?.day7}
             required
           ></textarea>
         </div>
         <div>
-          <button type="submit">Add Diet Plan</button>
+          <button type="submit">Update Diet Plan</button>
         </div>
       </form>
     </div>
   )
 }
 
-export default AddDietPlan
+export default UpdateDietPlan

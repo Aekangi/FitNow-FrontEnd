@@ -25,12 +25,16 @@ const DietPlan = () => {
             <Link to={`/dietplans/${dietPlan.id}`}>
               <DietPlanCard photo={dietPlan?.photo} name={dietPlan?.name} />
             </Link>
+            <button>
+              <Link to={`/dietplans/update_diet_plan/${dietPlan.id}`}>
+                Update Diet Plan
+              </Link>
+            </button>
           </div>
         ))}
       </section>
       <div>
         <button>
-          {' '}
           <Link to={'/dietplans/diet_plan_form'}>Add a Diet Plan </Link>
         </button>
       </div>
