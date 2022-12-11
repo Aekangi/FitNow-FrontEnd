@@ -10,6 +10,7 @@ import Workout from './pages/Workout'
 import WorkoutDetails from './pages/WorkoutDetails'
 import DietPlan from './pages/DietPlan'
 import DietPlanDetails from './pages/DietPlanDetails'
+import AddDietPlan from './pages/AddDietPlan'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -71,6 +72,7 @@ function App() {
             path="/dietplans/:diet_plan_id"
             element={<DietPlanDetails />}
           />
+          <Route path="/dietplans/diet_plan_form" element={<AddDietPlan />} />
         </Routes>
       </main>
     </div>

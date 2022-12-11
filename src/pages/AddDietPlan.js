@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import Client, { BASE_URL } from '../services/Api'
 
 const AddDietPlan = () => {
   let navigate = useNavigate()
@@ -19,15 +20,14 @@ const AddDietPlan = () => {
 
   const [formState, setFormState] = useState(initialForm)
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    axios.post('/dietplans', formState)
-    setFormState(initialForm)
-    navigate('/dietplans')
-  }
-
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    await Client.post(`${BASE_URL}/dietplans`, formState)
+    setFormState(initialForm)
+    navigate('/dietplans')
   }
 
   return (

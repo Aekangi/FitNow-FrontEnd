@@ -28,6 +28,12 @@ const DietPlan = () => {
           </div>
         ))}
       </section>
+      <div>
+        <button>
+          {' '}
+          <Link to={'/dietplans/diet_plan_form'}>Add a Diet Plan </Link>
+        </button>
+      </div>
     </div>
   )
 }
