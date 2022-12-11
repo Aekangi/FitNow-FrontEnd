@@ -64,95 +64,95 @@ const UpdateDietPlan = () => {
             type="text"
             name="photo"
             onChange={handleChange}
-            value={formValues?.photo}
+            value={formValues.photo}
             required
           ></input>
         </div>
         <div>
           <label htmlFor="diet_type">Diet Description</label>
           <textarea
-            id="diet_type"
+            name="diet_type"
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formValues?.diet_type}
+            value={formValues.diet_type}
             required
           ></textarea>
         </div>
         <div>
           <label htmlFor="day1">DAY 1</label>
           <textarea
-            id="day1"
+            name="day1"
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formValues?.day1}
+            value={formValues.day1}
             required
           ></textarea>
         </div>
         <div>
           <label htmlFor="day2">DAY 2</label>
           <textarea
-            id="day2"
+            name="day2"
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formValues?.day2}
+            value={formValues.day2}
             required
           ></textarea>
         </div>{' '}
         <div>
           <label htmlFor="day3">DAY 3</label>
           <textarea
-            id="day3"
+            name="day3"
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formValues?.day3}
+            value={formValues.day3}
             required
           ></textarea>
         </div>{' '}
         <div>
           <label htmlFor="day4">DAY 4</label>
           <textarea
-            id="day4"
+            name="day4"
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formValues?.day4}
+            value={formValues.day4}
             required
           ></textarea>
         </div>{' '}
         <div>
           <label htmlFor="day5">DAY 5</label>
           <textarea
-            id="day5"
+            name="day5"
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formValues?.day5}
+            value={formValues.day5}
             required
           ></textarea>
         </div>{' '}
         <div>
           <label htmlFor="day6">DAY 6</label>
           <textarea
-            id="day6"
+            name="day6"
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formValues?.day6}
+            value={formValues.day6}
             required
           ></textarea>
         </div>{' '}
         <div>
           <label htmlFor="day7">DAY 7</label>
           <textarea
-            id="day7"
+            name="day7"
             cols="30"
             rows="10"
             onChange={handleChange}
-            value={formValues?.day7}
+            value={formValues.day7}
             required
           ></textarea>
         </div>

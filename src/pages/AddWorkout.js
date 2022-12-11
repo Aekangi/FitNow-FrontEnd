@@ -68,6 +68,9 @@ const AddWorkout = () => {
             required
           ></input>
         </div>
+        <div>
+          <button type="submit">Add Workout Clip</button>
+        </div>
       </form>
     </div>
   )

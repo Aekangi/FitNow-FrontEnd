@@ -26,6 +26,11 @@ const Workout = () => {
             <Link to={`/exercises/${exercise.id}`}>
               <WorkoutCard video={exercise?.video_url} name={exercise?.name} />
             </Link>
+            <button>
+              <Link to={`/exercises/update_workout/${exercise.id}`}>
+                Update Workout
+              </Link>
+            </button>
           </div>
         ))}
       </section>
