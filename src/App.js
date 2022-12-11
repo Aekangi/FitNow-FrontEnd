@@ -65,12 +65,12 @@ function App() {
             }
           />
           <Route path="/exercises" element={<Workout />} />
-          <Route path="/exercise/:exercise_id" element={<WorkoutDetails />} />
+          <Route path="/exercises/:exercise_id" element={<WorkoutDetails />} />
           <Route path="/dietplans" element={<DietPlan />} />
-          {/* <Route
+          <Route
             path="/dietplans/:diet_plan_id"
             element={<DietPlanDetails />}
-          /> */}
+          />
         </Routes>
       </main>
     </div>

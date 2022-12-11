@@ -21,15 +21,17 @@ const WorkoutDetails = () => {
     <div>
       {workoutDetails.name}
       <section>
-        <video src={workoutDetails.video_url} />
+        <video controls>
+          <source src={workoutDetails.video_url} />
+        </video>
       </section>
       <div>
         <h3>Durations: {workoutDetails.duration}</h3>
-        <h3>{workoutDetails.difficulty_level}</h3>
+        <h3>Difficulty Level: {workoutDetails.difficulty_level}</h3>
       </div>
     </div>
   ) : (
-    <div>'Hello'</div>
+    <div>'Workout with such ID does not exist.'</div>
   )
 }
 
