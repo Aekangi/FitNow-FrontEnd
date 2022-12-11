@@ -31,6 +31,7 @@ const AddDietPlan = () => {
 
   return (
     <div>
+      <h1>Add Diet Plan</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Diet Plan Name</label>
@@ -43,7 +44,7 @@ const AddDietPlan = () => {
           ></input>
         </div>
         <div>
-          <label htmlFor="image">Image url</label>
+          <label htmlFor="image">Image Url</label>
           <input
             type="text"
             id="photo"
