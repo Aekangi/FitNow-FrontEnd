@@ -1,0 +1,36 @@
+nav {
+    padding: 2rem 0 1rem 0;
+    font-size: 1.5rem;
+    display: flex;
+    /* position: relative; */
+    flex-wrap: wrap;
+    justify-content:end;
+    align-items: center;
+    background-color: black;
+    opacity: 1;
+}
+
+nav a {
+    margin: 1rem 1rem 0 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+
+}
+nav a:hover {
+    color: white;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    width: 0px;
+}
+
+nav a:hover::before {
+    width: 100%
+}

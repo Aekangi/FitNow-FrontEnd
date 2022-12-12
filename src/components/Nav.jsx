@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React from 'react'
+import '../styling/nav.css'
 
 function Nav({ authenticated, user, handleLogOut }) {
     let authenticatedOptions

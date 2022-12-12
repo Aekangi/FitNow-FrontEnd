@@ -45,7 +45,7 @@ function DietPlanDetails() {
         <h3>Day 7: {dietPlanDetails.day7}</h3>
       </div>
       <div>
-        <button onClick={() => deleteWorkout()}>Delete Workout</button>
+        <button onClick={() => deleteWorkout()}>Delete Diet Plan</button>
       </div>
     </div>
   ) : (

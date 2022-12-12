@@ -19,7 +19,7 @@ const Workout = () => {
 
   return (
     <div>
-      <h1>Workouts</h1>
+      <h1>Workout Reels</h1>
       <section>
         {exercises?.map((exercise) => (
           <div key={exercise.id}>
