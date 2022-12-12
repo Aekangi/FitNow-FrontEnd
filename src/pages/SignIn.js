@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { SignInUser } from '../services/Auth'
+import '../styling/signin.css'
 
 const SignIn = ({ toggleAuthenticated, setUser }) => {
   const navigate = useNavigate()
@@ -27,42 +28,45 @@ const SignIn = ({ toggleAuthenticated, setUser }) => {
   }
 
   return (
-    <div>
-      <h1>SignIn</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
+    <div className="signInPage">
+      <div className="signIn">
+        <img src="assets/fitnowlogo.png" alt="" />
+        <form onSubmit={handleSubmit}>
+          <h1>Sign in</h1>
           <div>
-            <label htmlFor="email">Email</label>
+            <div className="loginLabel">
+              <label htmlFor="email">Email</label>
+            </div>
+            <input
+              onChange={handleChange}
+              name="email"
+              type="email"
+              placeholder="example@example.com"
+              value={formValues.email}
+              required
+            />
           </div>
-          <input
-            onChange={handleChange}
-            name="email"
-            type="email"
-            placeholder="example@example.com"
-            value={formValues.email}
-            required
-          />
-        </div>
-        <div>
-          <div div>
-            <label htmlFor="password">Password</label>
+          <div>
+            <div className="loginLabel">
+              <label htmlFor="password">Password</label>
+            </div>
+            <input
+              onChange={handleChange}
+              type="password"
+              name="password"
+              value={formValues.password}
+              placeholder="enter a password"
+              required
+            />
           </div>
-          <input
-            onChange={handleChange}
-            type="password"
-            name="password"
-            value={formValues.password}
-            placeholder="enter a password"
-            required
-          />
-        </div>
-        <button>SignIn</button>
-      </form>
-      {!auth && (
-        <div>
-          <h3>Provide your email and password</h3>
-        </div>
-      )}
+          <button>Sign In</button>
+        </form>
+        {!auth && (
+          <div>
+            <h3>Provide your email and password</h3>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

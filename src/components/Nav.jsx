@@ -7,6 +7,7 @@ function Nav({ authenticated, user, handleLogOut }) {
     if (user) {
       authenticatedOptions = (
         <nav>
+            <img src="" alt="logo" />
             <Link to="/">Home</Link>
             <Link to='/exercises'>Workouts</Link>
             <Link to="/dietplans">Diet Plans</Link>

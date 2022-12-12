@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
+import '../styling/signup.css'
 
 function SignUp() {
   const navigate = useNavigate()
@@ -34,53 +35,63 @@ function SignUp() {
   }
 
   return (
-    <div>
-      <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name</label>
-          <input
-            onChange={handleChange}
-            name="name"
-            type="text"
-            placeholder="John Doe"
-            value={formValues.name}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="usernama">Username</label>
-          <input
-            onChange={handleChange}
-            type="text"
-            name="username"
-            value={formValues.username}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input
-            onChange={handleChange}
-            name="email"
-            type="email"
-            placeholder="example@example.com"
-            value={formValues.email}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input
-            onChange={handleChange}
-            type="password"
-            name="password"
-            value={formValues.password}
-            required
-          />
-        </div>
-        <button>Sign In</button>
-      </form>
+    <div classname="signUpPage">
+      <div className="signUp">
+        <form onSubmit={handleSubmit}>
+          <h1>Sign Up</h1>
+          <div>
+            <div className="RegloginLabel">
+              <label htmlFor="name">Name</label>
+            </div>
+            <input
+              onChange={handleChange}
+              name="name"
+              type="text"
+              placeholder="John Doe"
+              value={formValues.name}
+              required
+            />
+          </div>
+          <div>
+            <div className="RegloginLabel">
+              <label htmlFor="usernama">Username</label>
+            </div>
+            <input
+              onChange={handleChange}
+              type="text"
+              name="username"
+              value={formValues.username}
+              required
+            />
+          </div>
+          <div>
+            <div className="RegloginLabel">
+              <label htmlFor="email">Email</label>
+            </div>
+            <input
+              onChange={handleChange}
+              name="email"
+              type="email"
+              placeholder="example@example.com"
+              value={formValues.email}
+              required
+            />
+          </div>
+          <div>
+            <div className="RegloginLabel">
+              <label htmlFor="password">Password</label>
+            </div>
+            <input
+              onChange={handleChange}
+              type="password"
+              name="password"
+              value={formValues.password}
+              required
+            />
+          </div>
+          <button>Sign In</button>
+        </form>
+      </div>
     </div>
   )
 }

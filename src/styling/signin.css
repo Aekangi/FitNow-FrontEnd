@@ -1,0 +1,53 @@
+.signInPage {
+    background: url('https://wallpapercave.com/wp/wp4030802.jpg');
+    background-size: cover;
+    height: 72em;
+    width: 100%;
+    /* position: relative; */
+  }
+ .signIn {
+    color: white;
+    
+ }
+ .loginLabel {
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+ }
+ .signInPage input{
+    height: 20px;
+    width: 200px;
+    /* border: 10px solid rgb(53, 47, 47); */
+    border-top: none;
+    border-radius: 10px;
+    border-right: none;
+    border-left: none;
+    margin-bottom: 20px;
+    background-color: transparent;
+  }
+.signIn h1{
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+ form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10%;
+ }
+
+ .signInPage button {
+    color: white;
+    margin-top: 30px;
+    font-size: px;
+    height: 40px;
+    width: 500px;
+    border-radius: 10px;
+    background-color: transparent;
+    letter-spacing: 8px;
+    font-weight: bold;
+  }
+
+
+
