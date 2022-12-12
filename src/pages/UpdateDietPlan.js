@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../services/Api'
+import Client from '../services/Api'
 
 const UpdateDietPlan = () => {
   let { diet_plan_id } = useParams()
@@ -22,13 +23,13 @@ const UpdateDietPlan = () => {
   }
   const [formValues, setFormValues] = useState(initialForm)
   const getDietPlanDetailsById = async () => {
-    const response = await axios.get(`${BASE_URL}/dietplans/${diet_plan_id}`)
+    const response = await Client.get(`${BASE_URL}/dietplans/${diet_plan_id}`)
     setFormValues(response.data)
   }
 
   useEffect(() => {
     getDietPlanDetailsById()
-  })
+  }, [])
 
   const handleChange = (event) => {
     setFormValues({

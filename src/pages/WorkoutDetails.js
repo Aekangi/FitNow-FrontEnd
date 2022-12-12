@@ -41,7 +41,7 @@ const WorkoutDetails = () => {
       </div>
     </div>
   ) : (
-    <div>'Workout with such ID does not exist.'</div>
+    <div>'Workout Reel with such ID does not exist.'</div>
   )
 }
 

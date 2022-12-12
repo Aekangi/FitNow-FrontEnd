@@ -69,7 +69,7 @@ const AddWorkout = () => {
           ></input>
         </div>
         <div>
-          <button type="submit">Add Workout Clip</button>
+          <button type="submit">Add Workout Reel</button>
         </div>
       </form>
     </div>

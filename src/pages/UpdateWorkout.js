@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../services/Api'
+import Client from '../services/Api'
 
 const UpdateWorkout = () => {
   let { exercise_id } = useParams()
@@ -17,7 +18,7 @@ const UpdateWorkout = () => {
 
   const [formValues, setFormValues] = useState(initialForm)
   const WorkoutDetailsById = async () => {
-    const response = await axios.get(`${BASE_URL}/exercises/${exercise_id}`)
+    const response = await Client.get(`${BASE_URL}/exercises/${exercise_id}`)
     setFormValues(response.data)
   }
   useEffect(() => {
@@ -39,7 +40,7 @@ const UpdateWorkout = () => {
 
   return (
     <div>
-      <h1>Update WorkOut Clip</h1>
+      <h1>Update WorkOut Reel</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Diet Plan Name</label>
@@ -83,7 +84,7 @@ const UpdateWorkout = () => {
           ></input>
         </div>
         <div>
-          <button type="submit">Update Workout Clip</button>
+          <button type="submit">Update Workout Reel</button>
         </div>
       </form>
     </div>
