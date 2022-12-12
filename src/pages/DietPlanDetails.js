@@ -1,11 +1,13 @@
 import React from 'react'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { BASE_URL } from '../services/Api'
+import Client from '../services/Api'
 
 function DietPlanDetails() {
   let { diet_plan_id } = useParams()
+  let navigate = useNavigate()
   const [dietPlanDetails, setDietPlanDetails] = useState([])
 
   const getDietPlanDetailsById = async () => {
@@ -16,12 +18,17 @@ function DietPlanDetails() {
     getDietPlanDetailsById()
   }, [])
 
+  const deleteWorkout = async () => {
+    await Client.delete(`${BASE_URL}/dietplans/${diet_plan_id}`)
+    navigate('/dietplans')
+  }
+
   return dietPlanDetails ? (
     <div>
       <div>{dietPlanDetails.name}</div>
       <div>
         <div>
-          <img src={dietPlanDetails.photo} alt="dietPlanImage" />
+          <img src={dietPlanDetails.photo} alt="diet Plan Image" />
         </div>
       </div>
       <div>
@@ -36,6 +43,9 @@ function DietPlanDetails() {
         <h3>Day 5: {dietPlanDetails.day5}</h3>
         <h3>Day 6: {dietPlanDetails.day6}</h3>
         <h3>Day 7: {dietPlanDetails.day7}</h3>
+      </div>
+      <div>
+        <button onClick={() => deleteWorkout()}>Delete Workout</button>
       </div>
     </div>
   ) : (
