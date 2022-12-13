@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import WorkoutCard from '../components/WorkoutCard'
 import { Link } from 'react-router-dom'
 import { BASE_URL } from '../services/Api'
+import '../styling/workout.css'
 
 const Workout = () => {
   const [exercises, setExercises] = useState([])
@@ -18,15 +19,15 @@ const Workout = () => {
   }, [])
 
   return (
-    <div>
-      <h1>Workout Reels</h1>
-      <section>
+    <div className="workout">
+      <section className="workoutArray">
+        <h1>Workout Reels</h1>
         {exercises?.map((exercise) => (
           <div key={exercise.id}>
             <Link to={`/exercises/${exercise.id}`}>
               <WorkoutCard video={exercise?.video_url} name={exercise?.name} />
             </Link>
-            <button>
+            <button className="update">
               <Link to={`/exercises/update_workout/${exercise.id}`}>
                 Update Workout
               </Link>
@@ -35,8 +36,8 @@ const Workout = () => {
         ))}
       </section>
       <div>
-        <button>
-          <Link to={'/exercises/exercise_form'}>Add a Workout Clip</Link>
+        <button className="add">
+          <Link to={'/exercises/exercise_form'}>Add a Workout Reel</Link>
         </button>
       </div>
     </div>

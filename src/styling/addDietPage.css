@@ -1,0 +1,54 @@
+.addDietPlan {
+        background-attachment: fixed;
+        background: url('https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-black-minimalist-atmospheric-wooden-background-backgroundwooden-backgroundtree-texture-image_77053.jpg');
+        background-size:contain;
+        color: white;
+        height: 106vh;
+}
+.days {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+.days > *{
+    flex-basis: 100%;
+    margin-left: 30px;
+}
+.days input, .days textarea {
+    height: 100px;
+    width: 250px;
+    color: white;
+}
+
+.dietDecription textarea{
+    height: 50px;
+    width: 400px;
+    color: white;
+}
+.name input {
+    color: white;
+}
+
+
+.addDietPlan input,  .addDietPlan textarea {
+    background-color: rgb(40, 37, 37);
+    color: white;
+}
+
+.submitPlan {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 60px;
+      margin-bottom: 50px;
+  }
+  .submitPlan button {
+    background-color: transparent;
+    color: white;
+    height: 40px;
+    width: 350px;
+    font-size: 20px;
+    letter-spacing: 3px;
+
+  } 

@@ -40,7 +40,6 @@ function DietPlanDetails() {
         <div>
           <img src={dietPlanDetails.photo} alt="diet Plan Image" />
         </div>
-
         <div className="detailPageDT">
           <h3>{dietPlanDetails.diet_type}</h3>
           <h2>7 Day Diet Plan: </h2>
@@ -54,7 +53,7 @@ function DietPlanDetails() {
         </div>
       </section>
       <div className="detailPageDelete">
-        <button onClick={() => deleteWorkout()}>Delete Diet Plan</button>
+        <button onClick={() => deleteWorkout()}>DELETE DIET PLAN</button>
       </div>
     </div>
   ) : (

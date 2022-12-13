@@ -13,11 +13,6 @@
 
 .detail {
     display: flex;
-    /* flex-direction: column; */
-    /* flex-wrap:nowrap; */
-    /* justify-content: center; */
-    /* align-items: flex-start; */
-    /* align-content: space-between; */
 }
 
 .detail > *{
@@ -25,16 +20,30 @@
 }
 
 .detailPage img{
-    /* flex: 1 1fr; */
+    
     
 }
 .detailPageDT {
     color: white;
-    /* flex: 2 1fr;
-    flex-wrap: wrap; */
 }
-.dietplan {
+
+.detailPageDelete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+   
+}
+.detailPageDelete button{
+    background-color: transparent;
     color: white;
-    /* flex: 2 1fr;
-    flex-wrap: wrap; */
+    height: 40px;
+    width: 350px;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.detailPage video {
+    height: 500px;
+    width: auto;
 }

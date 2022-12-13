@@ -1,9 +1,9 @@
-.dietPlan {
+.workout {
     background-attachment: fixed;
     background: url('https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-black-minimalist-atmospheric-wooden-background-backgroundwooden-backgroundtree-texture-image_77053.jpg');
     background-size:contain;
 }
-.dietPlanArray {
+.workoutArray {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -11,25 +11,24 @@
     height: 210vh;
 }
 
-.dpImage, .dpName {
+.woImage, .woName {
     max-height: 900px;
     max-width: 900px;
     width: 40vh;
     border-radius: 10px;
 }
 
-.dp {
+.wo {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin: 1rem; */
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 
-.dpImage:hover {
+.woImage:hover {
     border: 2px solid #F2E7E3;
     border-radius: 10px;
 }
@@ -53,7 +52,10 @@
 }
 a, a:visited { color: white; }
 
-.dietPage a {
+.workout video {
+    height: 400px;
+    width: 400px;
+}
+.workout a {
     text-decoration: none;
 }
-

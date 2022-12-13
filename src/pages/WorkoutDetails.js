@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../services/Api'
 import Client from '../services/Api'
+import '../styling/detailpg.css'
 
 const WorkoutDetails = () => {
   let { exercise_id } = useParams()
@@ -25,19 +26,19 @@ const WorkoutDetails = () => {
   }
 
   return workoutDetails ? (
-    <div>
-      {workoutDetails.name}
+    <div className="detailPage">
+      <div className="name">{workoutDetails.name}</div>
       <section>
         <video controls>
           <source src={workoutDetails.video_url} />
         </video>
       </section>
-      <div>
+      <div className="detailPageDT">
         <h3>Durations: {workoutDetails.duration}</h3>
         <h3>Difficulty Level: {workoutDetails.difficulty_level}</h3>
       </div>
-      <div>
-        <button onClick={() => deleteWorkout()}>Delete Workout</button>
+      <div className="detailPageDelete">
+        <button onClick={() => deleteWorkout()}>DELETE DIET PLAN</button>
       </div>
     </div>
   ) : (
