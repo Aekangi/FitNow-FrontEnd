@@ -7,7 +7,7 @@ function Nav({ authenticated, user, handleLogOut }) {
     if (user) {
       authenticatedOptions = (
         <nav>
-            <img src="" alt="logo" />
+            {/* <img src="assets/fitnowlogo.png" alt="logo" /> */}
             <Link to="/">Home</Link>
             <Link to='/exercises'>Workouts</Link>
             <Link to="/dietplans">Diet Plans</Link>
@@ -20,8 +20,8 @@ function Nav({ authenticated, user, handleLogOut }) {
     const publicOptions = (
       <nav>
           <Link to="/">Home</Link>
-          <Link to="/login">SignIn</Link>
-          <Link to="/register">SignUp</Link>
+          <Link to="/login">Sign In</Link>
+          <Link to="/register">Sign Up</Link>
           <Link to='/exercises'>Workouts</Link>
         <Link to="/dietplans">Diet Plans</Link>
       </nav>

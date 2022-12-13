@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import DietPlanCard from '../components/DietPlanCard'
 import { Link } from 'react-router-dom'
 import { BASE_URL } from '../services/Api'
+import '../styling/dietplan.css'
 
 const DietPlan = () => {
   const [dietPlans, setDietPlans] = useState([])
@@ -17,15 +18,14 @@ const DietPlan = () => {
   }, [])
 
   return (
-    <div>
-      <h1>Diet Plans</h1>
-      <section>
+    <div className="dietPlan">
+      <section className="dietPlanArray">
         {dietPlans?.map((dietPlan) => (
           <div key={dietPlan.id}>
             <Link to={`/dietplans/${dietPlan.id}`}>
               <DietPlanCard photo={dietPlan?.photo} name={dietPlan?.name} />
             </Link>
-            <button>
+            <button className="update">
               <Link to={`/dietplans/update_diet_plan/${dietPlan.id}`}>
                 Update Diet Plan
               </Link>
@@ -34,7 +34,7 @@ const DietPlan = () => {
         ))}
       </section>
       <div>
-        <button>
+        <button className="add">
           <Link to={'/dietplans/diet_plan_form'}>Add a Diet Plan </Link>
         </button>
       </div>

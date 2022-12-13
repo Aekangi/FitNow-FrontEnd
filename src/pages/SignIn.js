@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { SignInUser } from '../services/Auth'
-import '../styling/signin.css'
 
 const SignIn = ({ toggleAuthenticated, setUser }) => {
   const navigate = useNavigate()
@@ -30,9 +29,10 @@ const SignIn = ({ toggleAuthenticated, setUser }) => {
   return (
     <div className="signInPage">
       <div className="signIn">
-        <img src="assets/fitnowlogo.png" alt="" />
+        {/* <img src="assets/fitnowlogo.png" alt="" /> */}
         <form onSubmit={handleSubmit}>
-          <h1>Sign in</h1>
+          <h1>FitNow</h1>
+          <h2></h2>
           <div>
             <div className="loginLabel">
               <label htmlFor="email">Email</label>
@@ -59,7 +59,7 @@ const SignIn = ({ toggleAuthenticated, setUser }) => {
               required
             />
           </div>
-          <button>Sign In</button>
+          <button className="sib">Sign In</button>
         </form>
         {!auth && (
           <div>

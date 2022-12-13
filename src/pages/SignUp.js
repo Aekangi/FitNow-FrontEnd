@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
-import '../styling/signup.css'
+// import '../styling/signup.css'
 
 function SignUp() {
   const navigate = useNavigate()
@@ -35,10 +35,10 @@ function SignUp() {
   }
 
   return (
-    <div classname="signUpPage">
-      <div className="signUp">
+    <div className="signUpPageNow">
+      <div className="signUpNow">
         <form onSubmit={handleSubmit}>
-          <h1>Sign Up</h1>
+          <h1>FitNow</h1>
           <div>
             <div className="RegloginLabel">
               <label htmlFor="name">Name</label>
@@ -60,6 +60,7 @@ function SignUp() {
               onChange={handleChange}
               type="text"
               name="username"
+              placeholder="johndoe85"
               value={formValues.username}
               required
             />
@@ -85,11 +86,12 @@ function SignUp() {
               onChange={handleChange}
               type="password"
               name="password"
+              placeholder="1234"
               value={formValues.password}
               required
             />
           </div>
-          <button>Sign In</button>
+          <button className="sub">Sign Up</button>
         </form>
       </div>
     </div>

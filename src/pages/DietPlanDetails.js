@@ -9,6 +9,15 @@ function DietPlanDetails() {
   let { diet_plan_id } = useParams()
   let navigate = useNavigate()
   const [dietPlanDetails, setDietPlanDetails] = useState([])
+  const [dietPlans, setDietPlans] = useState([])
+  const getDietPlan = async () => {
+    const response = await axios.get(`${BASE_URL}/dietplans`)
+    setDietPlans(response.data)
+  }
+
+  useEffect(() => {
+    getDietPlan()
+  }, [])
 
   const getDietPlanDetailsById = async () => {
     const response = await axios.get(`${BASE_URL}/dietplans/${diet_plan_id}`)
