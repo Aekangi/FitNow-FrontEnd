@@ -19,10 +19,6 @@
     flex-basis: 100%;
 }
 
-.detailPage img{
-    
-    
-}
 .detailPageDT {
     color: white;
 }
@@ -43,7 +39,7 @@
     letter-spacing: 3px;
 }
 
-.detailPage video {
+.detailPage iframe {
     height: 500px;
-    width: auto;
+    width: 1000px;
 }

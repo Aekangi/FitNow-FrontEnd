@@ -6,16 +6,19 @@
 .workoutArray {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     justify-content: space-evenly;
     align-items: center;
-    height: 210vh;
 }
 
-.woImage, .woName {
-    max-height: 900px;
-    max-width: 900px;
+.wo img {
+    max-height: 600px;
+    max-width: 600px;
     width: 40vh;
     border-radius: 10px;
+}
+.wo h1 .woName {
+    font-size: 10px;
 }
 
 .wo {
@@ -41,7 +44,7 @@
     color: white;
 }
 .add {
-    margin: 0;
+    margin: 20px;
     margin-bottom: 60px;
     height: 50px;
     width: 400px;
@@ -58,6 +61,15 @@ a, a:visited { color: white; }
 }
 .workout a {
     text-decoration: none;
+}
+
+.pick1 {
+    color: white;
+    margin-top: 0;
+    text-align: left;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    letter-spacing: 5px;
 }
 
 /* #video {

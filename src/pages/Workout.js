@@ -20,8 +20,8 @@ const Workout = () => {
 
   return (
     <div className="workout">
+      <h1 className="pick1">Lets start living healthy today...</h1>
       <section className="workoutArray">
-        <h1>Workout Reels</h1>
         {exercises?.map((exercise) => (
           <div key={exercise.id}>
             <Link to={`/exercises/${exercise.id}`} state={exercise.video_url}>
