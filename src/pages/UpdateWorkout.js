@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../services/Api'
 import Client from '../services/Api'
+import '../styling/addworkout.css'
 
 const UpdateWorkout = () => {
   let { exercise_id } = useParams()
@@ -39,55 +40,63 @@ const UpdateWorkout = () => {
   }
 
   return (
-    <div>
-      <h1>Update WorkOut Reel</h1>
+    <div className="addWo">
       <form onSubmit={handleSubmit}>
+        <h1 className="woname">Add a WorkOut Reel</h1>
         <div>
-          <label htmlFor="name">Diet Plan Name</label>
+          <h2>Workout Name</h2>
+          <label htmlFor="name"></label>
           <input
             type="text"
-            name="name"
+            id="name"
+            placeholder="how to posture your back...?"
             onChange={handleChange}
             value={formValues.name}
             required
           ></input>
         </div>
         <div>
-          <label htmlFor="video_url">Video Url</label>
+          <h2>Video Url</h2>
+          <label htmlFor="video_url"></label>
           <input
             type="text"
-            name="video_url"
+            id="video_url"
             onChange={handleChange}
+            placeholder="www.vidoclip.com"
             value={formValues.video_url}
             required
           ></input>
         </div>
         <div>
-          <label htmlFor="duration">Duration </label>
+          <h2>Duration </h2>
+          <label htmlFor="duration"></label>
           <input
             type="text"
-            name="duration"
+            id="duration"
             onChange={handleChange}
+            placeholder="10sec"
             value={formValues.duration}
             required
           ></input>
         </div>
         <div>
-          <label htmlFor="difficulty_level">Difficulty Level </label>
+          <h2>Difficulty Level</h2>
+          <label htmlFor="difficulty_level"> </label>
           <input
             type="text"
-            name="difficulty_level"
+            id="difficulty_level"
             onChange={handleChange}
             placeholder="from 1-10"
             value={formValues.difficulty_level}
             required
           ></input>
         </div>
-        <div>
+        <div className="submitWo">
           <button type="submit">Update Workout Reel</button>
         </div>
       </form>
     </div>
   )
 }
+
 export default UpdateWorkout

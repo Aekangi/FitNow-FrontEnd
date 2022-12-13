@@ -29,7 +29,7 @@ const AddWorkout = () => {
       <form onSubmit={handleSubmit}>
         <h1 className="woname">Add a WorkOut Reel</h1>
         <div>
-          <h2>Diet Plan Name</h2>
+          <h2>Workout Name</h2>
           <label htmlFor="name"></label>
           <input
             type="text"
@@ -76,7 +76,7 @@ const AddWorkout = () => {
             required
           ></input>
         </div>
-        <div>
+        <div className="submitWo">
           <button type="submit">Add Workout Reel</button>
         </div>
       </form>
