@@ -24,7 +24,7 @@ const UpdateDietPlan = () => {
   }
   const [formValues, setFormValues] = useState(initialForm)
   const getDietPlanDetailsById = async () => {
-    const response = await Client.get(`${BASE_URL}/dietplans/${diet_plan_id}`)
+    const response = await Client.get(`/dietplans/${diet_plan_id}`)
     setFormValues(response.data)
   }
 
@@ -41,7 +41,7 @@ const UpdateDietPlan = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.put(`${BASE_URL}/dietplans/${diet_plan_id}`, formValues)
+    Client.put(`/dietplans/${diet_plan_id}`, formValues)
     setFormValues(initialForm)
     navigate('/dietplans')
   }

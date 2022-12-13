@@ -2,10 +2,13 @@ import React from 'react'
 import '../styling/addworkout.css'
 
 function WorkoutCard({name, duration, difficulty_level, video_url}) {
+
+
+
   return (
     <div className='wo'>
       <section>
-      <video className='woImage' width="320" height="240" controls> <source src={video_url}/></video>
+      <img src = {`https://img.youtube.com/vi/${video_url}/maxresdefault.jpg`} />
       </section>
       <div>
         <h1 className='woName'>{name}</h1>

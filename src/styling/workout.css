@@ -59,3 +59,7 @@ a, a:visited { color: white; }
 .workout a {
     text-decoration: none;
 }
+
+/* #video {
+    pointer-events: none;
+} */

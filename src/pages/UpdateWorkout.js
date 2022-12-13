@@ -19,12 +19,12 @@ const UpdateWorkout = () => {
 
   const [formValues, setFormValues] = useState(initialForm)
   const WorkoutDetailsById = async () => {
-    const response = await Client.get(`${BASE_URL}/exercises/${exercise_id}`)
+    const response = await Client.get(`/exercises/${exercise_id}`)
     setFormValues(response.data)
   }
   useEffect(() => {
     WorkoutDetailsById()
-  })
+  }, [])
 
   const handleChange = (event) => {
     setFormValues({
@@ -34,7 +34,7 @@ const UpdateWorkout = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.put(`${BASE_URL}/exercises/${exercise_id}`, formValues)
+    Client.put(`/exercises/${exercise_id}`, formValues)
     setFormValues(initialForm)
     navigate('/exercises')
   }
@@ -48,7 +48,7 @@ const UpdateWorkout = () => {
           <label htmlFor="name"></label>
           <input
             type="text"
-            id="name"
+            name="name"
             placeholder="how to posture your back...?"
             onChange={handleChange}
             value={formValues.name}
@@ -60,7 +60,7 @@ const UpdateWorkout = () => {
           <label htmlFor="video_url"></label>
           <input
             type="text"
-            id="video_url"
+            name="video_url"
             onChange={handleChange}
             placeholder="www.vidoclip.com"
             value={formValues.video_url}
@@ -72,7 +72,7 @@ const UpdateWorkout = () => {
           <label htmlFor="duration"></label>
           <input
             type="text"
-            id="duration"
+            name="duration"
             onChange={handleChange}
             placeholder="10sec"
             value={formValues.duration}
@@ -84,7 +84,7 @@ const UpdateWorkout = () => {
           <label htmlFor="difficulty_level"> </label>
           <input
             type="text"
-            id="difficulty_level"
+            name="difficulty_level"
             onChange={handleChange}
             placeholder="from 1-10"
             value={formValues.difficulty_level}

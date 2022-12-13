@@ -24,8 +24,11 @@ const Workout = () => {
         <h1>Workout Reels</h1>
         {exercises?.map((exercise) => (
           <div key={exercise.id}>
-            <Link to={`/exercises/${exercise.id}`}>
-              <WorkoutCard video={exercise?.video_url} name={exercise?.name} />
+            <Link to={`/exercises/${exercise.id}`} state={exercise.video_url}>
+              <WorkoutCard
+                video_url={exercise?.video_url}
+                name={exercise?.name}
+              />
             </Link>
             <button className="update">
               <Link to={`/exercises/update_workout/${exercise.id}`}>
