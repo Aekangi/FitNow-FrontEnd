@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../services/Api'
 import Client from '../services/Api'
-import '../styling/update.css'
 
 const UpdateDietPlan = () => {
   let { diet_plan_id } = useParams()
@@ -47,7 +46,7 @@ const UpdateDietPlan = () => {
   }
 
   return (
-    <div className="updatePage">
+    <div>
       <h1>Update Diet Plan</h1>
       <form onSubmit={handleSubmit}>
         <div>
