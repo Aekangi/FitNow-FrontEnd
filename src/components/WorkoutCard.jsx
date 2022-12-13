@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styling/addworkout.css'
 
 function WorkoutCard({name, duration, difficulty_level, video_url}) {
   return (

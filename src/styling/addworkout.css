@@ -1,0 +1,49 @@
+.addWo {
+        background-attachment: fixed;
+        background: url('https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-black-minimalist-atmospheric-wooden-background-backgroundwooden-backgroundtree-texture-image_77053.jpg');
+        background-size:contain;
+        color: white;
+        height: 92vh;
+}
+
+.addWo input, .addWo textarea {
+    border: 2px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 20px;
+    width: 400px;
+}
+
+::placeholder {
+    color: white;
+    font-size: 10px;
+}
+
+.woname{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitWo {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 60px;
+      margin-bottom: 50px;
+  }
+  .submitWo button {
+    background-color: transparent;
+    color: white;
+    height: 40px;
+    width: 350px;
+    font-size: 20px;
+    letter-spacing: 3px;
+
+  }
