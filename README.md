@@ -61,3 +61,7 @@ It's time to take control of your health today. After a hard day at work, the la
 ---
 
 #### **_Credits_**
+
+- Google - diet plans
+- Youtube - workout videos
+- [how to map videos](https://www.w3schools.com/tags/tag_video.asp)

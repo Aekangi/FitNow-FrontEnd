@@ -31,7 +31,7 @@ function SignUp() {
       email: '',
       password: ''
     })
-    navigate('/login')
+    navigate('/')
   }
 
   return (
