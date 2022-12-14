@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
-// import '../styling/signup.css'
 
 function SignUp() {
   const navigate = useNavigate()
