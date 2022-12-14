@@ -1,15 +1,15 @@
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 import WorkoutCard from '../components/WorkoutCard'
 import { Link } from 'react-router-dom'
 import { BASE_URL } from '../services/Api'
 import '../styling/workout.css'
+import Client from '../services/Api'
 
 const Workout = () => {
   const [exercises, setExercises] = useState([])
 
   const getAllWorkoutVideos = async () => {
-    const response = await axios.get(`${BASE_URL}/exercises`)
+    const response = await Client.get(`${BASE_URL}/exercises`)
     console.log(response.data)
     setExercises(response.data)
   }

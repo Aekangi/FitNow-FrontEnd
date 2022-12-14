@@ -1,15 +1,15 @@
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 import DietPlanCard from '../components/DietPlanCard'
 import { Link } from 'react-router-dom'
 import { BASE_URL } from '../services/Api'
 import '../styling/dietplan.css'
+import Client from '../services/Api'
 
 const DietPlan = () => {
   const [dietPlans, setDietPlans] = useState([])
 
   const getDietPlan = async () => {
-    const response = await axios.get(`${BASE_URL}/dietplans`)
+    const response = await Client.get(`${BASE_URL}/dietplans`)
     setDietPlans(response.data)
   }
 

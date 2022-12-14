@@ -29,7 +29,6 @@ const SignIn = ({ toggleAuthenticated, setUser }) => {
   return (
     <div className="signInPage">
       <div className="signIn">
-        {/* <img src="assets/fitnowlogo.png" alt="" /> */}
         <form onSubmit={handleSubmit}>
           <h1>FitNow</h1>
           <h2></h2>
