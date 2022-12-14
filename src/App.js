@@ -14,6 +14,7 @@ import DietPlanDetails from './pages/DietPlanDetails'
 import AddDietPlan from './pages/AddDietPlan'
 import UpdateDietPlan from './pages/UpdateDietPlan'
 import UpdateWorkout from './pages/UpdateWorkout'
+import About from './pages/About'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -49,6 +50,7 @@ function App() {
       </header>
       <main>
         <Routes>
+          <Route path="/about" element={<About />} />
           <Route path="/home" element={<Home />} />
           <Route
             path="/"

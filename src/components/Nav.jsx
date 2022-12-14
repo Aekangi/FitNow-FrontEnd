@@ -13,12 +13,15 @@ function Nav({ authenticated, user, handleLogOut }) {
             <Link onClick={handleLogOut} to="/">
               Sign Out 
             </Link>
+            <Link to='/about'>About</Link>
         </nav>
       )
     }
     const publicOptions = (
       <nav>
+          <Link to='/'>Sign In</Link>
           <Link  to="/register">Sign Up</Link>
+          <Link to='/about'>About</Link>
       </nav>
     )
   
