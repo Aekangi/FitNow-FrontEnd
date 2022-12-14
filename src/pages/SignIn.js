@@ -22,7 +22,7 @@ const SignIn = ({ toggleAuthenticated, setUser }) => {
       setFormValues({ email: '', password: '' })
       setUser(payload)
       toggleAuthenticated(true)
-      navigate('/')
+      navigate('/home')
     }
   }
 

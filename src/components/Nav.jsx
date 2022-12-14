@@ -7,10 +7,10 @@ function Nav({ authenticated, user, handleLogOut }) {
     if (user) {
       authenticatedOptions = (
         <nav>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
             <Link to='/exercises'>Workouts</Link>
             <Link to="/dietplans">Diet Plans</Link>
-            <Link onClick={handleLogOut} to="/login">
+            <Link onClick={handleLogOut} to="/">
               Sign Out 
             </Link>
         </nav>
@@ -18,11 +18,7 @@ function Nav({ authenticated, user, handleLogOut }) {
     }
     const publicOptions = (
       <nav>
-          <Link to="/">Home</Link>
-          <Link to="/login">Sign In</Link>
-          <Link to="/register">Sign Up</Link>
-          <Link to='/exercises'>Workouts</Link>
-        <Link to="/dietplans">Diet Plans</Link>
+          <Link  to="/register">Sign Up</Link>
       </nav>
     )
   
