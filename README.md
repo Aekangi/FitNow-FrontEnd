@@ -48,6 +48,10 @@ It's time to take control of your health today. After a hard day at work, the la
 
 ### **_Future Updates_**
 
+- Make User Profiles so the user can save the diet plan and workout on a single page rather than scroll through the content to find videos or plans again.
+- Have a search bar to search single items.
+- Add paypall so the user has to pay to view the plan. If they don't want to pay, they're able to only view the dinner for a single day.
+
 ---
 
 #### **_Work Progress_**
