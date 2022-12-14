@@ -4,7 +4,7 @@
 
 #### By: Aekangi Patel [LinkedIn](https://www.linkedin.com/in/aekangipatel/) | [FitNow-BackEnd](https://github.com/Aekangi/FitNow-BackEnd)
 
-### [FitNow App]()
+### [FitNow App](https://main.d1pe52f8thbmyf.amplifyapp.com/)
 
 ---
 
