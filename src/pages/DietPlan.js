@@ -19,6 +19,7 @@ const DietPlan = () => {
 
   return (
     <div className="dietPlan">
+      <h1 className="healthslongs">Just for the Health of it!</h1>
       <section className="dietPlanArray">
         {dietPlans?.map((dietPlan) => (
           <div key={dietPlan.id}>

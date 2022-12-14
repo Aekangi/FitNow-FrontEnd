@@ -41,7 +41,7 @@ function DietPlanDetails() {
           <img src={dietPlanDetails.photo} alt="diet Plan Image" />
         </div>
         <div className="detailPageDT">
-          <h3>{dietPlanDetails.diet_type}</h3>
+          <h3>Diet: {dietPlanDetails.diet_type}</h3>
           <h2>7 Day Diet Plan: </h2>
           <h3>Day 1: {dietPlanDetails.day1}</h3>
           <h3>Day 2: {dietPlanDetails.day2}</h3>

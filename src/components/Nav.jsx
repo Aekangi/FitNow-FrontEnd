@@ -7,12 +7,11 @@ function Nav({ authenticated, user, handleLogOut }) {
     if (user) {
       authenticatedOptions = (
         <nav>
-            {/* <img src="assets/fitnowlogo.png" alt="logo" /> */}
             <Link to="/">Home</Link>
             <Link to='/exercises'>Workouts</Link>
             <Link to="/dietplans">Diet Plans</Link>
-            <Link onClick={handleLogOut} to="/">
-              Sign Out
+            <Link onClick={handleLogOut} to="/login">
+              Sign Out 
             </Link>
         </nav>
       )

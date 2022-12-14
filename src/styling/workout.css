@@ -45,6 +45,7 @@
 }
 .add {
     margin: 20px;
+    margin-top: 20px;
     margin-bottom: 60px;
     height: 50px;
     width: 400px;
@@ -72,6 +73,3 @@ a, a:visited { color: white; }
     letter-spacing: 5px;
 }
 
-/* #video {
-    pointer-events: none;
-} */

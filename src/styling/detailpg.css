@@ -43,3 +43,8 @@
     height: 500px;
     width: 1000px;
 }
+
+.detailPage img {
+    height: 500px;
+    width: auto;
+}
