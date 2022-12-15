@@ -34,12 +34,12 @@
 
 .submitWo {
     display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 60px;
-      margin-bottom: 50px;
-  }
-  .submitWo button {
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+.submitWo button {
     background-color: transparent;
     color: white;
     height: 40px;
@@ -47,6 +47,4 @@
     font-size: 20px;
     letter-spacing: 3px;
 
-  }
-
-  
+}
