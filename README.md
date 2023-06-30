@@ -10,7 +10,7 @@
 
 ### **_Description_**
 
-It's time to take control of your health today. After a hard day at work, the last thing you want to think about is what to eat and which exercises to follow. Well, here on FitNow, we've got you covered! FitNow is designed for those individuals that would like to get fit through exercises and diet plans. FitNow has well designed dinner plans for each day of the week. Think no more and start scrolling through the app to see what works for you!
+FitNow: Your Ultimate Health Companion for Exercise and Diet Food Planning; The all-in-one health app designed to empower you on your fitness journey. With its two powerful sides—the Exercise App and Diet Food Plan—you'll have everything you need to achieve your health and wellness goals. FitNow ensures that both sides of the app work harmoniously to provide you with a holistic health experience. Seamlessly switch between the Exercise App and Diet Food Plan, and let them complement each other for optimal results Whether you're looking to shed pounds, build muscle, or simply maintain a balanced lifestyle, FitNow is your all-in-one companion for success. Get ready to unlock your full potential, harness your inner strength, and embrace a healthier, more vibrant version of yourself with FitNow – your gateway to a fit and nourished life.
 
 ---
 
